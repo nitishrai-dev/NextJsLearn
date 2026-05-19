@@ -1,0 +1,2 @@
+# NextJsLearn
+learning journey
