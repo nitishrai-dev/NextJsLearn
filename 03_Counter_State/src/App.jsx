@@ -29,7 +29,7 @@ export default function App() {
           <button style={{margin:"0 5px"}} onClick={()=>setCount(Number(countToSet))}>Set to {countToSet}</button>    
         </div>
       </div>
-    </div>
+    </div> 
   )
 }
 
