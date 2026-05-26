@@ -18,8 +18,8 @@ function Navigation(){
 
   return(
     <nav classname={`sticky top-0 z-10 shadow-md`}>
-      <div>
-        <div>
+      <div style={{backgroundColor: isDark ? '#1f2937' : '#f9fafb'}} className={`flex items-center justify-center py-4`}>
+      
           {sections.map((section)=>(
             <button 
             className={`px-4 py-2 m-2 rounded-lg font-medium transition-all bg-blue-600 text-white hover:bg-blue-800`}
@@ -28,7 +28,7 @@ function Navigation(){
               {section.label}
             </button>
           ))}
-        </div>
+        
       </div>
     </nav>
   )
@@ -40,7 +40,8 @@ function AppContent(){
   return(
     <div className={`min-h-screen bg-gray-800`}>
       <Navigation />
-     <div className="container mx-auto px-4 py-8">
+      <hr />
+     <div className="container mx-auto px-4 py-4 text-black">
       <header>
         <h1>React props explained</h1>
         <p>A comprehensive guide to understanding React props</p>
@@ -63,6 +64,10 @@ function AppContent(){
           <ThemeToggler />
         </div>
       </div>
+
+      <footer className="mt-8 text-center text-sm text-gray-400">
+        &copy; 2024 React Props Guide. All rights reserved.
+      </footer>
      </div>
     </div>
   )
