@@ -3,7 +3,7 @@ import BasicProps from './components/BasicProps.jsx'
 import ChildrenProps from './components/ChildrenProps.jsx'
 import RefProps from './components/RefProps.jsx'
 import ComplexProps from './components/ComplexProps.jsx'
-import ThemeToggler from './components/ThemeToggler.jsx'
+import ThemeToggler, {ThemeProvider, useTheme} from './components/ThemeToggler.jsx'
 
 function Navigation(){
   const isDark = true
@@ -36,9 +36,11 @@ function Navigation(){
 
 
 function AppContent(){
-  const isDark = true
+  // const isDark = true
+  const {isDark} = useTheme();
   return(
-    <div className={`min-h-screen bg-gray-800`}>
+    <div className={`min-h-screen bg-gray-800 ${isDark ? 'bg-gray-900' : 'bg-purple-400'}`}>
+
       <Navigation />
       <hr />
      <div className="container mx-auto px-4 py-4 text-black">
@@ -79,7 +81,9 @@ function App() {
 
   return (
     <>
-      <AppContent />
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
     </>
   )
 }
