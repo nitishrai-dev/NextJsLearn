@@ -27,11 +27,11 @@ function BasicProps() {
     <section className='p-8 bg-white rounded-xl shadow-2xl'>
       <h2 className='text-2xl font-bold mb-4'>Basic Props</h2>
       <p> 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quas debitis itaque odit alias eligendi dolores nihil cumque natus tempora temporibus nesciunt veritatis similique mollitia quis vero? Voluptates, officia explicabo!
+          Hey! everybody this is the Basic Props example and wonderful place to see them in action. Here we are using a reusable Button component and passing different props to it to see how it behaves. We are passing props like text, color, size, onClick and disabled to the Button component and based on these props the Button component is rendering different styles and behavior. Try clicking the buttons and see the count increase! Also try the disabled button to see how it behaves.
       </p>
-      <hr />
+      <hr className="my-4" />
       <div className='space-y-4'>
-        <h3>Different colors</h3>
+        <h3 className="text-xl font-semibold">Different colors</h3>
         <div className='flex flex-wrap gap-3'>
           <Button   
             text="Primary button"
@@ -55,9 +55,9 @@ function BasicProps() {
           />
         </div>
       </div>
-
+      <hr className="my-4" />
       <div className='space-y-4'>
-        <h3>Different Sizes</h3>
+        <h3 className="text-xl font-semibold">Different Sizes</h3>
         <div className='flex flex-wrap gap-3'>
           <Button   
             text="Small"
@@ -79,9 +79,9 @@ function BasicProps() {
           />
         </div>
       </div>
-
+      <hr className="my-4" />
       <div className='space-y-4'>
-        <h3>Disabled buttons</h3>
+        <h3 className="text-xl font-semibold">Disabled buttons</h3>
         <div className='flex flex-wrap gap-3'>
           <Button   
             text="Enabled Button"

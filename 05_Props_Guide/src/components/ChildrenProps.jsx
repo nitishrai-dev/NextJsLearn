@@ -31,11 +31,12 @@ function Container({children, layout='vertical'}){ // uses children for datavalu
 function ChildrenProps() {
   return (
     <section className='p-8 bg-white rounded-xl shadow-lg'>
-      <h2>Children Prop</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe molestias sunt numquam repellat, amet aut?</p>
+      <h2 className="text-2xl font-bold mb-4"><strong>Children Prop</strong></h2>
+      <p>Section description for the Children Prop example.</p>
+      <hr className="my-4" />
       <div className="space-y-6">
         <div>
-          <h3>Card Component with chidren</h3>
+          <h3 className="text-xl font-semibold mb-5">Card Component with chidren</h3>
           <Container layout="grid">
             <Card title='User Profile' color="blue">
               <p className="mb-2">
