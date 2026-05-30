@@ -1,4 +1,4 @@
-import CartItem, {cartItems} from "./CartItem.jsx";
+import CartItem from "./CartItem.jsx";
 function Cart({cart, onUpdateQuantity, onRemove, total}) {
   if(cart.length === 0) {
     return <div className="cart empty">Your cart is empty</div>
