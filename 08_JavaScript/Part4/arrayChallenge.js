@@ -99,6 +99,9 @@ console.log(isLondonInList);
 
 
 
+// go and learn about array methods like map, filter, reduce, find, findIndex, some, every, sort, reverse, slice, splice, indexOf, lastIndexOf, join, split, etc. from MDN documentation and practice using them in different scenarios.
+
+
 
 
 
