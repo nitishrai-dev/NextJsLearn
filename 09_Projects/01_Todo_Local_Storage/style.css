@@ -1,0 +1,6 @@
+body{
+    background: #c9c1c1;
+}
+.completed{
+    text-decoration: line-through red;
+}
