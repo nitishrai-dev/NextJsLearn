@@ -45,7 +45,7 @@ function AppContent(){
       <hr />
      <div className="container mx-auto px-4 py-4 text-black">
       <header>
-        <h1>React props explained</h1>
+        <h1>React props explained detailed</h1>
         <p>A comprehensive guide to understanding React props</p>
       </header>
 
