@@ -1,0 +1,14 @@
+'use client';
+import React from 'react'
+import { useParams } from 'next/navigation'
+const shop = () => {
+    const params = useParams();
+    console.log(params)
+  return (
+    <div>
+      Item Page
+    </div>
+  )
+}
+
+export default shop
