@@ -1,12 +1,14 @@
 'use client';
 import React from 'react'
-import { useParams } from 'next/navigation'
+import { useParams, usePathname } from 'next/navigation'
 const shop = () => {
     const params = useParams();
-    console.log(params)
+    const pathname = usePathname();
+    // console.log(params)
   return (
-    <div>
+    <div >
       Shop page
+      <h1>Path Name: {pathname}</h1>
     </div>
   )
 }
