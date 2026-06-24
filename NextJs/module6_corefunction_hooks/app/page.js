@@ -6,6 +6,6 @@ export default function Home() {
     redirect("/login")
   }
   return (
-    <h1>Current pathname</h1>
+    <h1>Current pathname   </h1>
   );
 }
