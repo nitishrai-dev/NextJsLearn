@@ -1,6 +1,8 @@
 import React from 'react'
 // import { Roboto } from 'next/font/google';
 import localFont from "next/font/local"
+import Link from 'next/link'
+
 // const roboto = Roboto({
 //   weight: '400',
 //   subsets: ['latin'],
@@ -14,6 +16,8 @@ const antaregularfont = localFont({
 const page = () => {
   return (
     <section className={`text-gray-400 bg-gray-900 body-font `}>
+      <Link href='/forms' className='text-blue-500 underline px-4 py-5'
+       > Go to Forms Page</Link>
   <div className="container px-5 py-24 mx-auto">
     <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="inline-block w-8 h-8 text-gray-500 mb-8" viewBox="0 0 975.036 975.036">
