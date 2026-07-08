@@ -32,12 +32,14 @@ const ContactForm = ({ action }) => {
         placeholder="Your Message"
         className="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
       ></textarea>
-      <button
+      <div className="flex justify-center">
+        <button
         type="submit"
-        className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+        className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-min flex items-center justify-center"
       >
         Submit
       </button>
+      </div>
     </Form>
   );
 };
