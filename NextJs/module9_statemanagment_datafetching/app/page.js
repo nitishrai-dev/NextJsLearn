@@ -3,11 +3,83 @@
 import AddPost from "@/components/add-post";
 import PostsList from "@/components/Post-list";
 
-// import {useState, useEffect} from "react";
-// import {useQuery} from "@tanstack/react-query";
+import {useState, useEffect} from "react";
+import {useQuery} from "@tanstack/react-query";
+
 
 export default function Home() {
   // const [data, setData] = useState(null);
+  // const [loading, setLoading] = useState(false);
+  // const [error,setError] = useState(null);
+
+  // async function fetchJokes(){
+  //   try{
+  //     setLoading(true);
+  //     const data = await fetch('https://api.freeapi.app/api/v1/public/randomjokes?limit=10&query=science&inc=categories%2Cid%2Ccontent&page=1');
+  //     const res = await data.json();
+  //     // Normalize response to always be an array so `.map` is safe
+  //     const items = Array.isArray(res) ? res : (res?.data ?? res?.results ?? []);
+  //     setData(items);
+  //     setLoading(false);
+  //   } catch (err) {
+  //     setError(err);
+  //   }
+  // }
+
+  // useEffect(()=>{
+  //   fetchJokes()
+  // },[]);
+
+  const {data, isLoading, error} = useQuery({
+    queryKey: ["jokes"],
+    queryFn: ()=>fetch('https://api.freeapi.app/api/v1/public/randomjokes?limit=10&query=science&inc=categories%2Cid%2Ccontent&page=1').then(res=>res.json())
+  })
+
+  if(isLoading){ return <div>loading....</div> }
+  if(error){ return <div>Error: {error.message}</div> }
+
+  return (
+    <div>
+      <h1>Posts</h1>
+      <PostsList />
+      <AddPost/>
+      {JSON.stringify(data, null, 2)}
+
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import {useState, useEffect} from "react";
+// import {useQuery} from "@tanstack/react-query";
+
+// const [data, setData] = useState(null);
   // const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState(null);
 
@@ -38,12 +110,3 @@ export default function Home() {
   // if(error){
   //   return <div>Error: {error.message}</div>
   // }
-
-  return (
-    <div>
-      <h1>Posts</h1>
-      <PostsList />
-      <AddPost/>
-    </div>
-  );
-}
